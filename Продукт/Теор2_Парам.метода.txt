@@ -1,0 +1,44 @@
+ѕараметры и агрументы метода.
+	ѕередать информацию метода можно как параметр. ќни действуют как переменные внутри метода. ѕараметры указываютс€ после имени метода в круглых скобках, их можно добавить столько угодно просто разделив их зап€тыми.  огда параметр передаетс€ методу, он называетс€ аргументом.
+	—делаем метод, который принимает в качестве параметра String вызываемое им€ name. ѕри вызове метода мы передаем им€, которое используетс€ внутри метода дл€ печати полного имени:
+
+public class Main {
+  static void Method(String name) {
+    System.out.println(name + " Refsnes");
+  }
+
+  public static void main(String[] args) {
+    Method("Oleg");
+    Method("Tema");
+    Method("Max");
+  }
+}
+
+// Oleg Refsnes
+// Tema Refsnes
+// Max Refsnes
+
+
+	“ак же есть ключевое слово void, указывающее на то, что этот метод должен возвращать значение. ≈сли вы хотите использовать примитивный тип данных, то вместо void используйте return:
+
+public class Main {
+  static int Method(int x) {
+    return 5 + x;
+  }
+
+  public static void main(String[] args) {
+    System.out.println(Method(3));
+  }
+}
+
+	ƒл€ большего удобства вы можете сохран€ть результат в переменной:
+
+public class Main {
+  static int Method(int x) {
+    return 5 + x;
+  }
+
+  public static void main(String[] args) {
+    System.out.println(Method(3));
+  }
+}

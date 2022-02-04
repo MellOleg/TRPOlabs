@@ -1,0 +1,47 @@
+Создание файла.
+Чтобы создать файл на Java, вы можете использовать метод сreateNewFile(). Этот метод возвращает логическое значение: true если файл был успешно создан, и false если файл уже существует. Обратите внимание, что метод заключен в try...catch блок.
+
+import java.io.File;  
+import java.io.IOException;  
+
+public class CreateFile {
+  public static void main(String[] args) {
+    try {
+      File myObj = new File("filename.txt");
+      if (myObj.createNewFile()) {
+        System.out.println("File created: " + myObj.getName());
+      } else {
+        System.out.println("File already exists.");
+      }
+    } catch (IOException e) {
+      System.out.println("An error occurred.");
+      e.printStackTrace();
+    }
+  }
+}
+
+Запись в файл.
+Используем класс FileWriter вместе с его методом write() для записи некоторого текста в файл, который мы создали в примере выше. Обратите внимание, что когда вы закончите запись в файл, вы должны закрыть его с помощью метода close():
+
+import java.io.FileWriter;   
+import java.io.IOException;  
+
+public class WriteToFile {
+  public static void main(String[] args) {
+    try {
+      FileWriter myWriter = new FileWriter("filename.txt");
+      myWriter.write("Files in Java might be tricky, but it is fun enough!");
+      myWriter.close();
+      System.out.println("Successfully wrote to the file.");
+    } catch (IOException e) {
+      System.out.println("An error occurred.");
+      e.printStackTrace();
+    }
+  }
+}
+
+Чтобы создать файл в определенном каталоге (требуется разрешение), укажите путь к файлу и используйте двойную обратную косую черту для экранирования \символа « » (для Windows). На Mac и Linux вы можете просто написать путь, например: /Users/name/filename.txt
+
+File myObj = new File("C:\\Users\\MyName\\filename.txt");
+
+

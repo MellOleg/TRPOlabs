@@ -1,0 +1,29 @@
+-Какой класс используется для записи в файл?
+FileWriter
+Write
+System
+File
+*1
+-Какой метод возвращает размер файла в байтах?
+long length()
+boolean exists()
+long lastModified()
+String[] list()
+*1
+-В каком пакете храниться класс File?
+java.util
+java.lang
+java.io
+*3
+-В каком случае можно удалить папку?
+В ней должно находится не более 1-го файла.
+Она должна быть пуста.
+Она не должна содержать латинских букв.
+Её размер не должен привышать 10 Мб.
+*2
+-Какой метод переименовывает файл или каталог?
+boolean isFile()
+boolean renameTo(File dest)
+File[] listFiles()
+String getName() 
+*2

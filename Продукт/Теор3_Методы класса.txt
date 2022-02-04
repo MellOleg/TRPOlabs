@@ -1,0 +1,35 @@
+Методы класса.
+	Мы уже узнали, что методы объявляются внутри класса и используются для выполнения определенных действий:
+	
+public class Main {
+  static void myMethod() {
+    System.out.println("Hello World!");
+  }
+
+  public static void main(String[] args) {
+    myMethod();
+  }
+}
+
+В Java часто встречаются атрибуты и методы static или public. Static метод, что означает, что к нему можно получить доступ без создания объекта класса, в отличие от того public, к которому могут получить доступ только объекты:
+
+public class Main {
+  // метод Static 
+  static void myStaticMethod() {
+    System.out.println("Static methods can be called without creating objects");
+  }
+
+  // метод Public 
+  public void myPublicMethod() {
+    System.out.println("Public methods must be called by creating objects");
+  }
+
+  // метод Main
+  public static void main(String[] args) {
+    myStaticMethod(); // вызов метода static
+    // myPublicMethod(); This would compile an error
+
+    Main myObj = new Main(); 
+    myObj.myPublicMethod(); 
+  }
+}

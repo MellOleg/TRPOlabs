@@ -1,0 +1,63 @@
+Интерфейсы.
+	Интерфейсы - это иной способ получения абстракции. interface полностью « абстрактный класс », который используется для группировки связанных методов с пустыми телами:
+
+interface Animal {
+  public void animalSound(); 
+  public void run(); 
+}
+
+Чтобы получить доступ к методам интерфейса, интерфейс должен быть «реализован» другим классом с ключевым словом implements. Тело метода интерфейса предоставляется классом реализации.
+
+Сами интерфейсы используются для обеспечения безопасности путём скрытия определённых деталей и показом только нужных. Так же из-за не поддержки джавой множественного наследования.
+
+Перечисления.
+enum - это специальный «класс», который представляет группу констант. Чтобы создать enum, используйте enum (вместо класса или интерфейса) и разделите константы запятыми. Обратите внимание, что они должны быть прописными буквами:
+
+enum Level {
+  LOW,
+  MEDIUM,
+  HIGH
+}
+
+Перечисления часто используются в switch операторах для проверки соответствующих значений:
+
+enum Level {
+  LOW,
+  MEDIUM,
+  HIGH
+}
+
+public class Main {
+  public static void main(String[] args) {
+    Level myVar = Level.MEDIUM;
+
+    switch(myVar) {
+      case LOW:
+        System.out.println("Low level");
+        break;
+      case MEDIUM:
+         System.out.println("Medium level");
+        break;
+      case HIGH:
+        System.out.println("High level");
+        break;
+    }
+  }
+}
+
+
+
+Пользовательский ввод Java.
+	Класс Scanner используется для получения пользовательского ввода, и он находится в java.util пакете. Чтобы использовать Scanner класс, создайте объект класса и используйте любой из доступных методов, найденных в Scanner документации класса.
+
+import java.util.Scanner;  
+
+class Main {
+  public static void main(String[] args) {
+    Scanner myObj = new Scanner(System.in);  
+    System.out.println("Enter username");
+
+    String userName = myObj.nextLine();  
+    System.out.println("Username is: " + userName); 
+  }
+}

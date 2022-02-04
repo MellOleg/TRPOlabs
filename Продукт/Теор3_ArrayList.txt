@@ -1,0 +1,79 @@
+Java ArrayList
+Класс ArrayList является изменяемым массивом, который можно найти в пакете java.util. Разница между встроенным массивом и массивом ArrayListв Java заключается в том, что размер массива нельзя изменить (если вы хотите добавить или удалить элементы в / из массива, вам необходимо создать новый). Хотя элементы можно добавлять и удалять в любое время. Синтаксис также немного отличается:
+
+import java.util.ArrayList; 
+
+ArrayList<String> cars = new ArrayList<String>();
+
+Чтобы добавить элементы в ArrayList, используйте метод add():
+
+import java.util.ArrayList;
+
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+    System.out.println(cars);
+  }
+}
+
+Чтобы получить доступ к элементу в ArrayList, используйте метод get() и обратитесь к порядковому номеру:
+
+cars.get(0);
+
+Чтобы изменить элемент, используйте метод set() и обратитесь к порядковому номеру:
+
+cars.set(0, "Opel");
+
+Чтобы удалить элемент, используйте метод remove() и обратитесь к порядковому номеру:
+
+cars.remove(0);
+
+Чтобы удалить элементы в ArrayList, используйте метод clear():
+
+cars.clear();
+
+Чтобы узнать, сколько элементов в ArrayList, используйте метод size:
+
+cars.size();
+
+Цикл через ArrayList
+Цикл через элементы ArrayList с for и использовать метод size(), чтобы указать, сколько раз цикл должен работать:
+
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+    for (int i = 0; i < cars.size(); i++) {
+      System.out.println(cars.get(i));
+    }
+  }
+}
+
+Сортировка ArrayList
+Еще один полезный класс в пакете java.util - это класс Collections, который включает метод sort() сортировки списков по алфавиту или числам:
+
+Сортировка ArrayList строк:
+
+import java.util.ArrayList;
+import java.util.Collections;  class
+
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+    Collections.sort(cars);  
+    for (String i : cars) {
+      System.out.println(i);
+    }
+  }
+}

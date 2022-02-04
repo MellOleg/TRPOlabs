@@ -1,0 +1,29 @@
+В Абстрактные классы.
+	Абстрактный класс похож на обычный класс. В абстрактном классе также можно определить поля и методы, но в то же время нельзя создать объект или экземпляр абстрактного класса. При определении абстрактных классов используется ключевое слово abstract:
+
+public abstract class Human{
+ 
+    private String name;
+     
+    public String getName() { return name; }
+}
+
+	Внутренний класс означает поместить определение класса в другой класс. Иногда разумное использование внутренних классов сделает код более лаконичным и сделает программу более умной.
+
+class InnerClass {  
+    class A{  
+        int a = 10;  
+        void b(){  
+            System.out.println("this is A.b()!");  
+        }  
+    }  
+    A getA(){
+     A a=new A();       
+         return a; 
+    }
+}
+public class Extends {	
+  public static void main(String[] args){	  
+	  new InnerClass().getA().b();
+  }
+}
